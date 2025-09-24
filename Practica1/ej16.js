@@ -35,5 +35,4 @@ async function ejecutarAsync() {
         console.error("Error:", error);
     }
 }
-
 ejecutarAsync();
