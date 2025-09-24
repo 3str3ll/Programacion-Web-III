@@ -1,0 +1,8 @@
+Usa CALLBACKS cuando:
+Son operaciones simples y únicas
+Trabajas con eventos (clics, teclas)
+APIs viejas que solo soportan callbacks
+Usa PROMESAS/ASYNC-AWAIT cuando:
+Necesitas encadenar operaciones
+Quieres manejo de errores limpio
+Trabajas con APIs modernas
