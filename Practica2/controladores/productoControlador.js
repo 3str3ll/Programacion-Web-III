@@ -1,6 +1,6 @@
 import * as productoModelo from '../modelos/productoModelo.js';
 
-// Ejercicio 6: POST /productos
+// Ej6
 export const crearProducto = async (req, res) => {
     try {
         const { nombre, precio, stock, categoria_id } = req.body;
@@ -28,7 +28,7 @@ export const crearProducto = async (req, res) => {
     }
 };
 
-// Ejercicio 7: GET /productos
+// Ej7
 export const obtenerProductosConCategoria = async (req, res) => {
     try {
         const productos = await productoModelo.obtenerProductosConCategoria();
@@ -41,7 +41,7 @@ export const obtenerProductosConCategoria = async (req, res) => {
     }
 };
 
-// Ejercicio 8: GET /productos/:id
+// Ej 8
 export const obtenerProductoPorId = async (req, res) => {
     try {
         const { id } = req.params;
@@ -60,7 +60,7 @@ export const obtenerProductoPorId = async (req, res) => {
     }
 };
 
-// Ejercicio 9: PUT /productos/:id
+// Ej 9
 export const actualizarProducto = async (req, res) => {
     try {
         const { id } = req.params;
@@ -92,7 +92,7 @@ export const actualizarProducto = async (req, res) => {
     }
 };
 
-// Ejercicio 10: PATCH /productos/:id/stock
+// Ej10
 export const actualizarStock = async (req, res) => {
     try {
         const { id } = req.params;

@@ -1,19 +1,14 @@
 import express from 'express';
-import cors from 'cors';
 import categoriaRutas from './rutas/categoriaRutas.js';
 import productoRutas from './rutas/productoRutas.js';
 
 const app = express();
 
-// Middlewares
-app.use(cors());
 app.use(express.json());
 
-// Rutas
 app.use('/api', categoriaRutas);
 app.use('/api', productoRutas);
 
-// Ruta de prueba
 app.get('/', (req, res) => {
     res.json({ 
         message: 'API de Práctica 2 funcionando',
@@ -36,12 +31,8 @@ app.get('/', (req, res) => {
     });
 });
 
-// Manejo de errores 404
-app.use('*', (req, res) => {
-    res.status(404).json({ error: 'Endpoint no encontrado' });
-});
 
-const puerto = 3000;
+const puerto = 3021;
 app.listen(puerto, () => { 
     console.log(`Servidor ejecutándose en http://localhost:${puerto}`);
 });

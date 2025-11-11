@@ -9,19 +9,19 @@ import {
 
 const router = express.Router();
 
-// Ejercicio 1
+// Ej 1
 router.post('/categories', crearCategoria);
 
-// Ejercicio 2
+// Ej 2
 router.get('/categories', obtenerTodasCategorias);
 
-// Ejercicio 3
+// Ej 3
 router.get('/categorias/:id', obtenerCategoriaConProductos);
 
-// Ejercicio 4
+// Ej4
 router.put('/categorias/:id', actualizarCategoria);
 
-// Ejercicio 5
+// Ej5
 router.delete('/categorias/:id', eliminarCategoria);
 
 export default router;

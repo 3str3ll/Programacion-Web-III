@@ -1,6 +1,6 @@
 import { db } from '../config/db.js';
 
-// Ejercicio 6: Crear nuevo producto
+// Ej 6
 export const crearProducto = async (producto) => {
     const { nombre, precio, stock, categoria_id } = producto;
     const [resultado] = await db.query(
@@ -10,7 +10,7 @@ export const crearProducto = async (producto) => {
     return { id: resultado.insertId, ...producto };
 };
 
-// Ejercicio 7: Obtener todos los productos con nombre de categoría
+// Ej7
 export const obtenerProductosConCategoria = async () => {
     const [resultado] = await db.query(`
         SELECT p.*, c.nombre as categoria_nombre 
@@ -21,7 +21,7 @@ export const obtenerProductosConCategoria = async () => {
     return resultado;
 };
 
-// Ejercicio 8: Obtener producto por ID con categoría
+// Ej8
 export const obtenerProductoPorId = async (id) => {
     const [resultado] = await db.query(`
         SELECT p.*, c.nombre as categoria_nombre 
@@ -32,7 +32,7 @@ export const obtenerProductoPorId = async (id) => {
     return resultado[0] || null;
 };
 
-// Ejercicio 9: Actualizar producto
+// Ej9
 export const actualizarProducto = async (id, producto) => {
     const { nombre, precio, stock, categoria_id } = producto;
     const [resultado] = await db.query(
@@ -42,7 +42,7 @@ export const actualizarProducto = async (id, producto) => {
     return resultado.affectedRows;
 };
 
-// Ejercicio 10: Actualizar stock
+// Eje 10:
 export const actualizarStock = async (id, cantidad) => {
     const [resultado] = await db.query(
         'UPDATE productos SET stock = stock + ?, fecha_act = CURRENT_TIMESTAMP WHERE id = ?',

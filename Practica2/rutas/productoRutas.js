@@ -9,19 +9,19 @@ import {
 
 const router = express.Router();
 
-// Ejercicio 6
+// Ej6
 router.post('/productos', crearProducto);
 
-// Ejercicio 7
+// Ej 7
 router.get('/productos', obtenerProductosConCategoria);
 
-// Ejercicio 8
+// Ej8
 router.get('/productos/:id', obtenerProductoPorId);
 
-// Ejercicio 9
+// Ej 9
 router.put('/productos/:id', actualizarProducto);
 
-// Ejercicio 10
+// Ej10
 router.patch('/productos/:id/stock', actualizarStock);
 
 export default router;

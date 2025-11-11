@@ -1,6 +1,6 @@
 import { db } from '../config/db.js';
 
-// Ejercicio 1: Crear nueva categoría
+// Ej1
 export const crearCategoria = async (categoria) => {
     const { nombre, descripcion } = categoria;
     const [resultado] = await db.query(
@@ -10,13 +10,13 @@ export const crearCategoria = async (categoria) => {
     return { id: resultado.insertId, ...categoria };
 };
 
-// Ejercicio 2: Obtener todas las categorías
+// Ej 2
 export const obtenerTodasCategorias = async () => {
     const [resultado] = await db.query('SELECT * FROM categories ORDER BY fecha_alta DESC');
     return resultado;
 };
 
-// Ejercicio 3: Obtener categoría por ID con productos
+// Ej 3
 export const obtenerCategoriaConProductos = async (id) => {
     const [categorias] = await db.query('SELECT * FROM categories WHERE id = ?', [id]);
     
@@ -35,7 +35,7 @@ export const obtenerCategoriaConProductos = async (id) => {
     };
 };
 
-// Ejercicio 4: Actualizar categoría
+// Ej 4
 export const actualizarCategoria = async (id, categoria) => {
     const { nombre, descripcion } = categoria;
     const [resultado] = await db.query(
@@ -45,7 +45,7 @@ export const actualizarCategoria = async (id, categoria) => {
     return resultado.affectedRows;
 };
 
-// Ejercicio 5: Eliminar categoría
+// Ej5
 export const eliminarCategoria = async (id) => {
     const [resultado] = await db.query('DELETE FROM categories WHERE id = ?', [id]);
     return resultado.affectedRows;

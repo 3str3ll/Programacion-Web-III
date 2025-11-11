@@ -1,6 +1,6 @@
 import * as categoriaModelo from '../modelos/categoriaModelo.js';
 
-// Ejercicio 1: POST /categories
+// Ej1
 export const crearCategoria = async (req, res) => {
     try {
         const { nombre, descripcion } = req.body;
@@ -20,7 +20,7 @@ export const crearCategoria = async (req, res) => {
     }
 };
 
-// Ejercicio 2: GET /categories
+// Ej2
 export const obtenerTodasCategorias = async (req, res) => {
     try {
         const categorias = await categoriaModelo.obtenerTodasCategorias();
@@ -33,7 +33,7 @@ export const obtenerTodasCategorias = async (req, res) => {
     }
 };
 
-// Ejercicio 3: GET /categorias/:id
+// Ej3
 export const obtenerCategoriaConProductos = async (req, res) => {
     try {
         const { id } = req.params;
@@ -52,7 +52,7 @@ export const obtenerCategoriaConProductos = async (req, res) => {
     }
 };
 
-// Ejercicio 4: PUT /categorias/:id
+// Ej4
 export const actualizarCategoria = async (req, res) => {
     try {
         const { id } = req.params;
@@ -77,7 +77,7 @@ export const actualizarCategoria = async (req, res) => {
     }
 };
 
-// Ejercicio 5: DELETE /categorias/:id
+// Ej5
 export const eliminarCategoria = async (req, res) => {
     try {
         const { id } = req.params;
