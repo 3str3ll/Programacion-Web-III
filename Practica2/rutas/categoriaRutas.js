@@ -1,8 +1,6 @@
 import express from 'express';
 import {
-    crearCategoria,
-    obtenerTodasCategorias,
-    obtenerCategoriaConProductos,
+    crearCategoria,obtenerTodasCategorias,obtenerCategoriaConProductos,
     actualizarCategoria,
     eliminarCategoria
 } from '../controladores/categoriaControlador.js';
